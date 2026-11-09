@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!-- HOME_DIR is replaced with your home directory at install time; see README.md. -->
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>com.g-varona.memoryd</string>
+    <key>ProgramArguments</key>
+    <array>
+        <string>HOME_DIR/.local/bin/memoryd</string>
+        <string>serve</string>
+    </array>
+    <key>EnvironmentVariables</key>
+    <dict>
+        <key>HOME</key>
+        <string>HOME_DIR</string>
+        <key>RUST_LOG</key>
+        <string>info</string>
+    </dict>
+    <key>RunAtLoad</key>
+    <true/>
+    <key>KeepAlive</key>
+    <true/>
+    <key>ThrottleInterval</key>
+    <integer>10</integer>
+    <key>ProcessType</key>
+    <string>Background</string>
+    <key>StandardErrorPath</key>
+    <string>HOME_DIR/Library/Logs/memoryd/memoryd.log</string>
+    <key>StandardOutPath</key>
+    <string>HOME_DIR/Library/Logs/memoryd/memoryd.log</string>
+</dict>
+</plist>
